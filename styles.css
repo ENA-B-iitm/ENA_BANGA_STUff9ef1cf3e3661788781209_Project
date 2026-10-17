@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    url('/static/img/mad2-bg.png');
+  background-size: cover, 50%;
+  background-position: center, center;
+  background-attachment: fixed, fixed;
+  color: #24312b;
+}
+
+.topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #dfe5dc;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #276749;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #dfe5dc;
+  border-radius: 8px;
+}
+
+.stat {
+  border-left: 4px solid #276749;
+}
+
+.table-responsive {
+  max-height: 520px;
+}
+
+.status-dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.status-Open,
+.status-active,
+.status-Booked {
+  background: #2f855a;
+}
+
+.status-Closed,
+.status-inactive,
+.status-Cancelled {
+  background: #b7791f;
+}
+
+.status-blacklisted {
+  background: #c53030;
+}
+
+.status-Completed {
+  background: #2b6cb0;
+}
+
+.status-Pending,
+.status-Approved {
+  background: #718096;
+}
+
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  background: rgba(255,255,255,0.88);
+  border-right: 1px solid #dfe5dc;
+}
+
+.sidebar .nav-link {
+  color: #24312b;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sidebar .nav-link.active {
+  background: #276749;
+  color: #fff;
+}
