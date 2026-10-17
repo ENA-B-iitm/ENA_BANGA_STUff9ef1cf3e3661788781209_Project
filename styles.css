@@ -3,12 +3,10 @@
 }
 
 body {
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-    url('/static/img/mad2-bg.png');
-  background-size: cover, 50%;
-  background-position: center, center;
-  background-attachment: fixed, fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #24312b;
 }
 

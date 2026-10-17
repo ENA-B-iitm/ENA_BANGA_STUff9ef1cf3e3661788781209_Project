@@ -22,7 +22,7 @@ EXPORT_DIR = os.path.join(BASE_DIR, "exports")
 REDIS_URL = os.environ.get("REDIS_URL", "redis://localhost:6379/0")
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=".", static_url_path="/static")
 app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-change-me")
 app.config.update(
     CELERY_BROKER_URL=REDIS_URL,
@@ -267,7 +267,7 @@ def require_role(*roles):
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return send_file("index.html")
 
 
 @app.post("/api/register")

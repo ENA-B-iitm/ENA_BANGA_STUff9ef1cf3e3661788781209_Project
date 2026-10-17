@@ -425,7 +425,7 @@ createApp({
                 <div class="row g-4">
                   <div class="col-md-4" v-for="trek in dashboard.assigned" :key="trek.id">
                     <div class="panel h-100 d-flex flex-column" style="border-radius:12px;overflow:hidden">
-                      <img src="/static/img/mad2_treck.jpg" style="width:100%;height:160px;object-fit:cover;">
+                      <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" style="width:100%;height:160px;object-fit:cover;">
                       <div class="p-3 flex-grow-1 d-flex flex-column">
                         <div class="d-flex justify-content-between align-items-start mb-1">
                           <h5 class="mb-0">{{ trek.name }}</h5>
@@ -498,7 +498,7 @@ createApp({
               <div class="row g-4">
                 <div class="col-md-4" v-for="trek in treks" :key="trek.id">
                   <div class="panel h-100 d-flex flex-column" style="border-radius:12px;overflow:hidden">
-                    <img src="/static/img/mad2_treck.jpg" style="width:100%;height:180px;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" style="width:100%;height:180px;object-fit:cover;">
                     <div class="p-3 flex-grow-1 d-flex flex-column">
                       <h5 class="mb-1">{{ trek.name }}</h5>
                       <div class="text-muted small mb-2">{{ trek.location }}</div>
