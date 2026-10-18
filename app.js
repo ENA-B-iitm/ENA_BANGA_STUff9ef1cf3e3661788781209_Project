@@ -365,6 +365,12 @@ createApp({
                   </div>
                   <button class="btn btn-success w-100">{{ mode === 'login' ? 'Login' : 'Create account' }}</button>
                 </form>
+                <div v-show="mode === 'login'" class="alert alert-info mt-3 mb-0" role="note">
+                  <strong>Demo login credentials</strong>
+                  <div class="small mt-2">Admin email: admin@treck.com | Password: admin123</div>
+                  <div class="small">Staff email: staff@tma.local | Password: staff123</div>
+                  <div class="small">You can register yourself as a staff or user using the registration feature.</div>
+                </div>
               </div>
             </div>
           </section>

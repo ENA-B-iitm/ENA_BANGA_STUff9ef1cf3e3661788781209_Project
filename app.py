@@ -175,7 +175,7 @@ def init_db():
             );
             """
         )
-        admin = conn.execute("SELECT id FROM users WHERE role = 'admin'").fetchone()
+        admin = conn.execute("SELECT id FROM users WHERE email = ?", ("admin@treck.com",)).fetchone()
         if not admin:
             conn.execute(
                 """
@@ -190,7 +190,8 @@ def init_db():
                     datetime.utcnow().isoformat(),
                 ),
             )
-        if conn.execute("SELECT COUNT(*) AS count FROM treks").fetchone()["count"] == 0:
+        staff = conn.execute("SELECT id FROM users WHERE email = ?", ("staff@tma.local",)).fetchone()
+        if not staff:
             staff_id = conn.execute(
                 """
                 INSERT INTO users (name, email, password_hash, role, contact, gender, created_at)
@@ -204,6 +205,9 @@ def init_db():
                     datetime.utcnow().isoformat(),
                 ),
             ).lastrowid
+        else:
+            staff_id = staff["id"]
+        if conn.execute("SELECT COUNT(*) AS count FROM treks").fetchone()["count"] == 0:
             today = datetime.utcnow().date()
             sample_treks = [
                 ("Valley Ridge Trail", "Himachal Pradesh", "Moderate", 4, 18, staff_id, "Open", today + timedelta(days=10), today + timedelta(days=14)),
